@@ -10,6 +10,22 @@
         <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
         <img id="skyTexture2" src="https://cdn.glitch.com/2d3672f0-821f-483e-bbe2-9e1943ffe866%2F46121631785_e8f976d785_k.jpg?1549732233045">
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      </a-assets>
+      <!--  Box with Material Texture -->
+      <a-box src="#boxTexture" position="0 3 -5" rotation="0 45 45" scale="2 2 2" animation="property: position; to: 0 3.6 -5; dur: 1500; easing: linear; loop=true">
+      </a-box>
+      <!--  Sky with Material Texture -->
+      <a-sky src="#skyTexture"></a-sky>
+      <!--  Ground with Material Texture (repeating 10 by 10-->
+      <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+      <!--    Lighting    -->
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light type="point" intensity="2" position="7.5 9.5 5.4"></a-light>
+      <!--  Spatial Audio, it becomes louder as we move forward      -->
+      <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true"
+    position="0 1 -5"></a-sound>
+      <!--    Adding Text    -->
+      <a-text value="Hello, A-Frame!" color="#fff" position="0 4 -2" scale="1.5 1.5 1.5"></a-text>
     </a-scene>
   </body>
 </html>
